@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account {
+  color: gray;
+  align-items: center;
+  text-align: center;
+}
+
+.account a {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: gray;
+}
+
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0px;
+  background-color: white;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+}
+
+.navbar-container img {
+  padding-left: 20px;
+  padding-top: 5px;
+}
+
+.navbar-container ul li {
+  display: inline-block;
+}
+
+.navbar-container ul li h1 {
+  color: black;
+}
+
+.navbar-container ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.navbar-left {
+  font-size: large;
+  padding-left: 30px;
+}
+
+.navbar-right {
+  margin: auto 0px auto auto;
+  padding-left: 150px;
+}
+
+.navbar-right li {
+  padding-right: 30px;
+}
+
+.navbar-right li a {
+  color: grey;
+}
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.login-form h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login-form label {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.signup-form h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.fill-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 100px;
+  padding: 100px 250px 130px 250px;
+  border-radius: 20px;
+  box-shadow: 0px 2px 10px 1.5px rgba(0, 0, 0, 0.25);
+}
+
+.signup-form label {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+  text-overflow: ellipsis;
+}
+
+/* Chrome/Safari/Opera */
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
+/* Firefox 18- */
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+
+/* Firefox 19+ */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+
+/* IE 8 and older ;) */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+
+::placeholder {
+  padding: 10px;
+}
+
+.button {
+  margin: 0 auto;
+  width: 250px;
+  height: 30px;
+  font-size: 13px;
+  border-radius: 5px;
+  border: 1px solid #d73938;
+  color: white;
+  background-color: #d73938;
+}
+
+.account-info {
+  width: 70%;
+  text-align: -webkit-center;
+  height: auto;
+  margin: auto;
+}
+
+.personal-info .account {
+  color: gray;
+  text-align: left;
+  margin-top: 30px;
+  font-weight: lighter;
+}
+
+.title_customer {
+  margin-top: 72px;
+  text-align: center;
+  margin-bottom: 70px;
+  text-transform: uppercase;
+}
+
+.head {
+  width: 55%;
+  text-align: left;
+  font-size: 22px;
+  margin-top: 40px;
+  margin-left: 48px;
+  text-transform: capitalize;
+}
+
+.sub-head {
+  font-size: 18px;
+  padding-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.body {
+  margin: 0;
+  font-size: 16px;
+  padding-left: 18px;
+  font-weight: lighter;
+}
+
+.popup-delete-acc {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.popup-delete-acc:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.overlay-acc .popup-acc-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  height: 120px;
+  width: 100%;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.controls {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.yes-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: none;
+}
+
+.yes-btn:hover {
+  background-color: gray;
+}
+
+.no-btn {
+  width: 100px;
+  height: 40px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #d73938;
+  color: white;
+  background-color: #d73938;
+}
+
+.no-btn:hover {
+  background-color: red;
+}
+
+.edit-personal-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.edit-personal-info .button {
+  width: 100px;
+  height: 40px;
+}
+
+.room-hotel-info {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+}
+
+.info {
+  width: 50%;
+  height: 500px;
+  margin: auto;
+  margin-right: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+select {
+  width: 130px;
+  margin-top: 10px;
+}
+
+.room-info {
+  margin-left: 50px;
+  width: -webkit-fill-available;
+}
+
+.money-icon {
+  width: 120px;
+  height: 40px;
+  margin-top: 10px;
+  text-align: center;
+  border: 1px solid #aaaaaa;
+  border-radius: 10px;
+}
+
+/*reservation*/
+.reservation {
+  width: 60%;
+}
+/*reservation title*/
+.reservation-title {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+/*reservation header*/
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*reservation radio-day*/
+/*.reservation-header*/
+.radio-days {
+  font-weight: bold;
+  display: inline-flex;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #d73938;
+}
+
+/*.reservation-header*/
+.radio__input {
+  display: none;
+}
+
+/*.reservation-header*/
+.radio__label {
+  padding: 8px 14px;
+  font-size: h3;
+  color: #aaaaaa;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.1s;
+  text-decoration: none;
+}
+
+/*.reservation-header*/
+.radio__label:not(:last-of-type) {
+  border-right: 1px solid #d73938;
+}
+
+/*.reservation-header*/
+.radio__input:checked + .radio__label {
+  color: #fff;
+  background: #d73938;
+}
+
+/*reservation body*/
+.reservation-body {
+  margin-top: 30px;
+  font-size: h3;
+  overflow: auto;
+}
+
+.reservation-body::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.reservation-body::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: #0004;
+  visibility: hidden;
+}
+
+.reservation-body:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+/*reservation table*/
+.reservation-body .res-table {
+  width: 100%;
+}
+
+/*.reservation-body*/
+.res-table,
+.res-th,
+.res-td {
+  border-collapse: collapse;
+  padding: 1rem;
+}
+
+/*.reservation-body*/
+.res-th {
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 1000px) {
+  .res-td:not(:first-of-type) {
+    min-width: 12.5rem;
+  }
+}
+
+/*button*/
+.mg-button-red {
+  padding: 7px 50px;
+  border-radius: 5px;
+  font-size: h3;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #d73938;
+  background-color: #d73938;
+  display: inline-block;
+}
+
+/*reservation button*/
+.reservation-button-red {
+  width: 100px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 5px;
+  font-size: h3;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  border: 1px solid #d73938;
+  background-color: #d73938;
+  display: inline-block;
+}
+
+.reservation-button-black {
+  width: 100px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 5px;
+  font-size: h3;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  display: inline-block;
+}
+
+.reservation-button-edit {
+  font-size: 20px;
+  color: black;
+}
+
+/*reservation popup*/
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-box .container {
+  top: 50%;
+  left: 50%;
+  transform: translate(120%, 30%);
+  max-width: 400px;
+  width: 100%;
+  background: white;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.reservation-details .column1 {
+  display: flex;
+  column-gap: 70px;
+}
+
+.reservation-details .column2 {
+  display: flex;
+  column-gap: 30px;
+}
+
+.reservation-details .column3 {
+  display: flex;
+  column-gap: 10px;
+}
+
+.reservation-details .column4 {
+  display: flex;
+  column-gap: 3px;
+}
+
+.popup-box .container form .reservation-details .input-box {
+  width: 100%;
+  margin-top: 5px;
+}
+
+form .reservation-details .input-box label {
+  display: block;
+  font-size: h2;
+  font-weight: bold;
+}
+
+form .reservation-details .input-box input {
+  position: relative;
+  height: 30px;
+  width: 100%;
+  outline: none;
+  font-size: h2;
+  border-radius: 5px;
+  border: 1px solid #aaaaaa;
+  padding-left: 0 25px;
+  transition: all 0.3s ease;
+}
+
+.reservation-details .res-info-box {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.reservation-details .res-info-box .res-dt {
+  font-size: h2;
+  font-weight: bold;
+}
+
+.reservation-details .res-dd {
+  margin-left: 10px;
+  font-size: h2;
+}
+
+.reservation-details .input-box input:focus,
+.reservation-details .input-box input:valid {
+  border-color: #303030;
+}
+
+.popup-add-button {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1em;
+}
+
+.popup-edit-button {
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 1em;
+}
+
+.popup-edit-button a:first-child {
+  margin-right: auto;
+}
+
+.popup-info-button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*Customer List*/
+.search-container {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.search-input {
+  font-size: 16px;
+  color: #303030;
+}
