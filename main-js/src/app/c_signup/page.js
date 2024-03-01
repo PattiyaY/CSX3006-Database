@@ -1,14 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import "./app.css";
+import "../app.css";
 import Link from "next/link";
 
-export default function Signup() {
+export default function Home() {
   return (
     <>
       <div className="navbar">
         <nav className="navbar-container">
-          <Link href="#">
+          <Link href="#" className="link">
             <Image
               src="/Assumption_University_of_Thailand_(logo).png"
               alt="logo"
@@ -18,7 +19,7 @@ export default function Signup() {
           </Link>
           <ul className="navbar-login">
             <li>
-              <Link href="#">
+              <Link href="#" className="link">
                 <h1>online hotel management system</h1>
               </Link>
             </li>
@@ -30,6 +31,9 @@ export default function Signup() {
           <h1>Sign up</h1>
           <br />
 
+          <label htmlFor="email">
+            <b>Email</b>
+          </label>
           <input
             type="email"
             id="email"
@@ -38,6 +42,9 @@ export default function Signup() {
             required
           />
 
+          <label htmlFor="password">
+            <b>Password</b>
+          </label>
           <input
             type="password"
             id="password"
@@ -46,6 +53,9 @@ export default function Signup() {
             required
           />
 
+          <label htmlFor="name">
+            <b>Name</b>
+          </label>
           <input
             type="text"
             id="name"
@@ -54,6 +64,9 @@ export default function Signup() {
             required
           />
 
+          <label htmlFor="surname">
+            <b>Surname</b>
+          </label>
           <input
             type="text"
             id="surname"
@@ -62,6 +75,9 @@ export default function Signup() {
             required
           />
 
+          <label htmlFor="address">
+            <b>Address</b>
+          </label>
           <input
             type="text"
             id="address"
@@ -69,14 +85,15 @@ export default function Signup() {
             placeholder="Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584-5678"
           />
 
-          <input
-            type="submit"
-            name="submit"
-            className="button"
-            value="Sign up"
-          />
+          <button type="submit" name="submit" className="button">
+            Sign up
+          </button>
+
           <p className="account">
-            Already have an account? <Link href="./page.js">Login</Link>
+            Already have an account?{" "}
+            <Link href="/" className="link">
+              Login
+            </Link>
           </p>
         </div>
       </div>
